@@ -25,7 +25,7 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
     private let numberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
-        nf.minimumFractionDigits = 0
+        nf.minimumFractionDigits = 2
         nf.maximumFractionDigits = 2
         return nf
     }()
@@ -92,7 +92,7 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
         tipPerPerson.valueLabel.text = numberFormatter.string(from: NSNumber(value: Int(tipSliderValue)))! + "%"
         tipPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: tipValue))!
         let totalSliderValue = splitView.slider.value
-        totalValue = tipValue + (billAmount/Double(Int(totalSliderValue)))
+        totalValue = (tipValue + billAmount)/Double(Int(totalSliderValue))
         totalPerPerson.valueLabel.text = "x" + numberFormatter.string(from: NSNumber(value: Int(totalSliderValue)))!
         totalPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: totalValue))!
     
@@ -119,7 +119,7 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
                 tipPerPerson.valueLabel.text = numberFormatter.string(from: NSNumber(value: tipSliderValue))! + "%"
                 tipPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: tipValue))!
                 let totalSliderValue = splitView.slider.value
-                totalValue = tipValue + (billAmount/Double(Int(totalSliderValue)))
+                totalValue = (tipValue + billAmount)/Double(Int(totalSliderValue))
                 totalPerPerson.valueLabel.text = "x" + numberFormatter.string(from: NSNumber(value: totalSliderValue))!
                 totalPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: totalValue))!
             }
@@ -148,7 +148,7 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
         tipValue = (billAmount/100) * Double(Int(sender.value))
         tipPerPerson.valueLabel.text = numberFormatter.string(from: NSNumber(value: Int(sender.value)))! + "%"
         tipPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: tipValue))!
-        totalValue = tipValue + (billAmount/Double(Int(tipView.slider.value)))
+        totalValue = (tipValue + billAmount)/Double(Int(splitView.slider.value))
         totalPerPerson.valueLabel.text = "x" + numberFormatter.string(from: NSNumber(value: Int(splitView.slider.value)))!
         totalPerPerson.costLabel.text = "$ " + numberFormatter.string(from: NSNumber(value: totalValue))!
         
