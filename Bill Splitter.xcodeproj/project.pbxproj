@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216E0D922031096B00C06E36 /* DescriptiveSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E0D912031096B00C06E36 /* DescriptiveSlider.swift */; };
+		216E0D94203118E800C06E36 /* PerPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E0D93203118E800C06E36 /* PerPersonView.swift */; };
 		217E7564202CF3A90002FEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E7563202CF3A90002FEF4 /* AppDelegate.swift */; };
 		217E7569202CF3A90002FEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217E7567202CF3A90002FEF4 /* Main.storyboard */; };
 		217E756B202CF3A90002FEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217E756A202CF3A90002FEF4 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216E0D912031096B00C06E36 /* DescriptiveSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveSlider.swift; sourceTree = "<group>"; };
+		216E0D93203118E800C06E36 /* PerPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerPersonView.swift; sourceTree = "<group>"; };
 		217E7560202CF3A90002FEF4 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217E7563202CF3A90002FEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		217E7568202CF3A90002FEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				217E7563202CF3A90002FEF4 /* AppDelegate.swift */,
 				217E7591202CFC2F0002FEF4 /* BillSplitViewController.swift */,
+				216E0D912031096B00C06E36 /* DescriptiveSlider.swift */,
+				216E0D93203118E800C06E36 /* PerPersonView.swift */,
 				217E7567202CF3A90002FEF4 /* Main.storyboard */,
 				217E756A202CF3A90002FEF4 /* Assets.xcassets */,
 				217E756C202CF3A90002FEF4 /* LaunchScreen.storyboard */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				217E7592202CFC2F0002FEF4 /* BillSplitViewController.swift in Sources */,
+				216E0D922031096B00C06E36 /* DescriptiveSlider.swift in Sources */,
 				217E7564202CF3A90002FEF4 /* AppDelegate.swift in Sources */,
+				216E0D94203118E800C06E36 /* PerPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
