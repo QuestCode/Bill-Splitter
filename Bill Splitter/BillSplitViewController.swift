@@ -16,9 +16,9 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var billAmountLabel: UILabel!
     @IBOutlet weak var tipView: DescriptiveSlider!
     @IBOutlet weak var splitView: DescriptiveSlider!
+    @IBOutlet weak var tipPerPerson: PerPersonView!
+    @IBOutlet weak var totalPerPerson: PerPersonView!
     @IBOutlet weak var tipTextField: UITextField!
-    @IBOutlet weak var tipPriceLabel: UILabel!
-    @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var payTipButton: UIButton!
     
     // MARK: - Private Properties -
@@ -90,6 +90,9 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
         splitView.titleLabel.text = "Split :"
         splitView.minValueLabel.text = "0"
         splitView.maxValueLabel.text = " 10"
+        tipPerPerson.titleLabel.text = "Tip"
+        totalPerPerson.titleLabel.text = "Total"
+        totalPerPerson.costLabel.text = "$ 75.00"
     }
     
     private func setupConstraints() {
@@ -106,17 +109,17 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
     
     private func updateTipLabel() {
         if tipValue != 0.00 {
-            tipPriceLabel.text = numberFormatter.string(from: NSNumber(value: tipValue))
+            tipPerPerson.costLabel.text = numberFormatter.string(from: NSNumber(value: tipValue))
         } else {
-            tipPriceLabel.text = "0.00"
+            tipPerPerson.costLabel.text = "0.00"
         }
     }
     
     private func updateTotalLabel() {
         if tipValue != 0.00 {
-            totalPriceLabel.text = numberFormatter.string(from: NSNumber(value: totalValue))
+            totalPerPerson.titleLabel.text = numberFormatter.string(from: NSNumber(value: totalValue))
         } else {
-            totalPriceLabel.text = "0.00"
+            totalPerPerson.titleLabel.text = "0.00"
         }
     }
     

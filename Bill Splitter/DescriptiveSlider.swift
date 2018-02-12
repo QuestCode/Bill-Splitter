@@ -30,6 +30,7 @@ class DescriptiveSlider: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin)
+        lbl.textAlignment = .center
         lbl.textColor = .white
         return lbl
     }()
@@ -38,6 +39,7 @@ class DescriptiveSlider: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin)
+        lbl.textAlignment = .center
         lbl.textColor = .white
         return lbl
     }()
