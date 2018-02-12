@@ -51,6 +51,7 @@ class PerPersonView: UIView {
     
     private func setupView() {
         self.backgroundColor = .clear
+        
         self.addSubview(titleLabel)
         self.addSubview(perPersonLabel)
         self.addSubview(costLabel)

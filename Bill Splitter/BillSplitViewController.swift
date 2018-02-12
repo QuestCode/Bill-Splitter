@@ -84,27 +84,23 @@ class BillSplitViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func settings() {
+        
         tipView.titleLabel.text = "Tip :"
+        tipView.slider.minimumValue = 0
+        tipView.slider.maximumValue = 20
         tipView.minValueLabel.text = "0%"
         tipView.maxValueLabel.text = "20%"
+        
+        
         splitView.titleLabel.text = "Split :"
+        splitView.slider.minimumValue = 0
+        splitView.slider.maximumValue = 10
         splitView.minValueLabel.text = "0"
         splitView.maxValueLabel.text = " 10"
+        
         tipPerPerson.titleLabel.text = "Tip"
         totalPerPerson.titleLabel.text = "Total"
         totalPerPerson.costLabel.text = "$ 75.00"
-    }
-    
-    private func setupConstraints() {
-        // Get the superview's layout
-        let margins = view.layoutMarginsGuide
-        
-        // Top
-        // Leading Constraint
-        
-        // Trailing Constraint
-        
-        // Height
     }
     
     private func updateTipLabel() {
