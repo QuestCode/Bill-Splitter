@@ -45,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="tipFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ofk-qS-GTF"/>
+                                    <action selector="tipFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="kdN-l0-v8U"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rmf-Yo-aJS"/>
                                 </connections>
                             </textField>

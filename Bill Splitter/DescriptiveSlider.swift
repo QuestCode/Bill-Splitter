@@ -22,6 +22,7 @@ class DescriptiveSlider: UIView {
     let slider: UISlider = {
         let slider = UISlider()
         slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.isContinuous = false
         slider.minimumTrackTintColor = .white
         return slider
     }()

@@ -28,6 +28,15 @@ class PerPersonView: UIView {
         return lbl
     }()
 
+    let valueLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
+        lbl.textColor = .white
+        lbl.textAlignment = .right
+        return lbl
+    }()
+    
     let costLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -54,6 +63,7 @@ class PerPersonView: UIView {
         
         self.addSubview(titleLabel)
         self.addSubview(perPersonLabel)
+        self.addSubview(valueLabel)
         self.addSubview(costLabel)
         
         // Get the superview's layout
@@ -82,6 +92,18 @@ class PerPersonView: UIView {
         
         let perPersonConstraints = [perPersonLabelTopConstraint,perPersonLabelLeadingConstraint,perPersonLabelWidthConstraint,perPersonLabelBottomConstraint]
         activateConstraints(constraints: perPersonConstraints, active: true)
+        
+        // Top
+        let valueLabelTopConstraint = valueLabel.topAnchor.constraint(equalTo: margins.topAnchor)
+        // Leading Constraint
+        let valueLabelTrailingConstraint = valueLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor)
+        // Trailing Constraint
+        let valueLabelWidthConstraint = valueLabel.widthAnchor.constraint(equalToConstant: 80)
+        // Height
+        let valueLabelBottomConstraint = valueLabel.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
+        
+        let valueLabelConstraints = [valueLabelTopConstraint,valueLabelTrailingConstraint,valueLabelWidthConstraint,valueLabelBottomConstraint]
+        activateConstraints(constraints: valueLabelConstraints, active: true)
         
         // Top
         let costLabelTopConstraint = costLabel.topAnchor.constraint(equalTo: margins.topAnchor)
